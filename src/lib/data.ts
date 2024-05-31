@@ -49,7 +49,7 @@ export const links: Array<Link> = [
 export const skills = ['Public Speaking', 'Microsoft Office'] as const
 
 /**
- * Type info
+ * Type info DO NOT EDIT BELOW THIS LINE -----------------------------
  */
 
 interface Artifact {
