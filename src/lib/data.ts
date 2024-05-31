@@ -86,9 +86,24 @@ interface Experience {
    * 'Toms River, NJ'
    */
   location: string
+  /**
+   * Describe your experience like this:
+   * 'I worked as a paramedic for XYZ organization and I was responsible for...'
+   */
   description: string
+  /**
+   * If this is a work experience use HiOutlineBriefcase
+   * If this is an educational experience use LuGraduationCap
+   */
   icon?: FunctionComponentElement<IconBaseProps>
+  /**
+   * Provide the year you started i.e. '2019'
+   */
   start: string
+  /**
+   * Provide the year you ended or if you are still there use present like this:
+   * '2024' or 'Present'
+   */
   end: string
 }
 
