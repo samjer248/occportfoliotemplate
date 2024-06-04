@@ -9,6 +9,7 @@ export const artifacts: Array<Artifact> = [
     title: 'Title of Artifact/Project',
     description: 'Description of artifact or project.',
     tags: ['List', 'Items', 'From', 'Skills', 'Below'],
+    url: 'https://www.linkedin.com/pulse/understanding-your-digital-footprint-how-can-help-job-sam/',
   },
 ] as const
 
@@ -31,7 +32,7 @@ export const experience: Array<Experience> = [
   },
 ] as const
 
-export const links: Array<Link> = [
+export const links: Link[] = [
   {
     name: 'Home',
     hash: '#home',
@@ -42,7 +43,11 @@ export const links: Array<Link> = [
   },
   {
     name: 'Hello',
-    hash: '',
+    hash: '#hello',
+  },
+  {
+    name: 'Link4',
+    hash: '#link4',
   },
 ] as const
 
@@ -73,6 +78,10 @@ interface Artifact {
    * Then use nameOfImage for the imageUrl property.
    */
   imageUrl?: StaticImageData | string
+  /**
+   * Enter a url to the page you want visitors to explore
+   */
+  url: string
 }
 
 interface Experience {
