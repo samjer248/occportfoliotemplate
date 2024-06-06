@@ -23,7 +23,10 @@ const Header = () => {
                   key={link.hash + index}
                   initial={{ y: -100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ type: 'spring', stiffness: 100 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 100,
+                  }}
                 >
                   <Link
                     className="transition-color flex w-full items-center justify-center px-3 py-3 hover:text-gray-950"
