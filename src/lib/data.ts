@@ -3,6 +3,18 @@ import React from 'react'
 import { HiOutlineBriefcase } from 'react-icons/hi'
 import { LuGraduationCap } from 'react-icons/lu'
 
+/**
+ * START SECTIONS
+ */
+export const intro = {
+  portraitAlt: 'Describe your profile picture',
+  emoji: '👋',
+  description: `Hello <strong>I'm Ryan</strong>. I'm a graduate of Ocean County College. I enjoy <em>solving problems</em> and helping others with their goals.`,
+}
+/**
+ * END SECTIONS
+ */
+
 export const artifacts: Array<Artifact> = [
   {
     title: 'Title of Artifact/Project',

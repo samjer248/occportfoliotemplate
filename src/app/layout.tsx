@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn('font-sans', fontSans.variable)}>
+      <body className={cn('pt-28 font-sans sm:pt-36', fontSans.variable)}>
         <Header />
         <main>{children}</main>
       </body>
