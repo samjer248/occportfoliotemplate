@@ -1,6 +1,13 @@
 import { StaticImageData } from 'next/image'
 import { FunctionComponentElement } from 'react'
-import { IconBaseProps } from 'react-icons'
+import { IconBaseProps, IconType } from 'react-icons'
+
+export type About = {
+  /**
+   * Enter html to describe yourself. `<strong></strong>` for bold and `<em></em>` for italic
+   */
+  text: string
+}
 
 export interface Artifact {
   /**
@@ -27,6 +34,29 @@ export interface Artifact {
    * Enter a url to the page you want visitors to explore
    */
   url: string
+}
+
+export interface Button {
+  /**
+   * What should the button say?
+   */
+  label?: string
+  /**
+   * Where should the button take them?
+   */
+  link: string
+  /**
+   * What style would you like for your button?
+   */
+  style: 'default' | 'secondary' | 'outline' | 'ghost' | 'destructive' | 'link'
+  /**
+   * If you want a icon, specify it here.
+   */
+  icon?: FunctionComponentElement<IconBaseProps>
+  /**
+   * Describe the link for screen readers
+   */
+  alt?: string
 }
 
 export interface Experience {
@@ -59,6 +89,14 @@ export interface Experience {
    * '2024' or 'Present'
    */
   end: string
+}
+
+export type Intro = {
+  portrait: StaticImageData | string
+  portraitAlt: string
+  emoji: string
+  description: string
+  buttons: Button[]
 }
 
 export interface Link {

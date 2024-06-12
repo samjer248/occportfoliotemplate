@@ -1,11 +1,14 @@
 'use client'
 import Image from 'next/image'
 import { intro } from '@/lib/data'
-import { MotionConfig, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { cn } from '@/lib/utils'
+import { buttonVariants } from './ui/button'
 
 const Intro = () => {
   return (
-    <section>
+    <section className="p-4">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -17,7 +20,7 @@ const Intro = () => {
             transition={{ type: 'tween', duration: 0.2 }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={intro.portrait}
               alt={intro.portraitAlt}
               width={250}
               height={250}
@@ -41,10 +44,50 @@ const Intro = () => {
           </motion.span>
         </div>
       </div>
-      <p
-        className="prose sm:prose-lg lg:prose-xl xl:prose-2xl mx-auto max-w-screen-sm"
-        dangerouslySetInnerHTML={{ __html: intro.description }}
-      ></p>
+      <motion.div
+        className="prose mx-auto max-w-screen-sm py-3 sm:prose-lg lg:prose-xl xl:prose-2xl prose-h1:text-xl prose-h1:font-semibold sm:py-10 prose-h1:sm:text-3xl"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <h1 dangerouslySetInnerHTML={{ __html: intro.description }} />
+      </motion.div>
+      <div>
+        {intro.buttons.length > 0 && (
+          <motion.ul
+            className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:flex-wrap sm:gap-8"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.1,
+            }}
+          >
+            {intro.buttons.map((button, index) => {
+              return (
+                <li key={button.link + index}>
+                  <Link
+                    href={button.link}
+                    className={cn(
+                      buttonVariants({ variant: button.style || 'default' }),
+                    )}
+                    aria-label={button.alt}
+                  >
+                    {button.label}
+                    {button.icon && (
+                      <span
+                        className={cn('ml-4', {
+                          'ml-0': button.icon && !button.label,
+                        })}
+                      >
+                        {button.icon}
+                      </span>
+                    )}
+                  </Link>
+                </li>
+              )
+            })}
+          </motion.ul>
+        )}
+      </div>
     </section>
   )
 }
