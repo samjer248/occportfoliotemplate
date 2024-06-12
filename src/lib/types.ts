@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image'
 import { FunctionComponentElement } from 'react'
 import { IconBaseProps, IconType } from 'react-icons'
+import { skills } from './data'
 
 export type About = {
   /**
@@ -19,10 +20,14 @@ export interface Artifact {
    */
   description: string
   /**
+   * An image to represent your artifact
+   */
+  image?: StaticImageData | string
+  /**
    * Enter a comma-separated list of items inside square brackets like this:
    * ['Adobe Photoshop', 'Microsoft Excel', 'First Aid']
    */
-  tags: string[]
+  tags: Skill[]
   /**
    * Upload an image into the /public/images folder
    * Then import the image at the top of this file like this:
@@ -111,3 +116,5 @@ export interface Link {
    */
   hash: string // i.e. "#projects"
 }
+
+type Skill = (typeof skills)[number]

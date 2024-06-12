@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={cn('pt-28 font-sans sm:pt-36', fontSans.variable)}>
         <Header />
         <main>{children}</main>
