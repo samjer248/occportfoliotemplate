@@ -5,10 +5,14 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from './ui/button'
+import { useSectionInView } from '@/lib/hooks'
+import { useActiveSectionContext } from '@/context/ActiveSectionContextProvider'
 
 const Intro = () => {
+  const { ref } = useSectionInView('Home', 0.5)
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
   return (
-    <section className="p-4">
+    <section className="scroll-mt-36 p-4" id="home" ref={ref}>
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div

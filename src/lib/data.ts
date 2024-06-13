@@ -25,6 +25,7 @@ export const sitemetadata = {
   title: 'Your Name',
   description: 'Replace with a description of you that is 145-160 characters.',
   dark: false,
+  footer: 'Your Name | All rights reserved',
 }
 /**
  * END SEO DATA
@@ -81,25 +82,6 @@ export const artifacts: Array<Artifact> = [
   },
 ] as const
 
-export const experience: Array<Experience> = [
-  {
-    title: 'Name of Educational Institution',
-    location: 'City, State',
-    description: 'Name of Program, Certificate, or Degree',
-    icon: React.createElement(LuGraduationCap),
-    start: 'Start year',
-    end: 'End Year or Present',
-  },
-  {
-    title: 'Name of Organization',
-    location: 'City, State',
-    description: 'Describe your work.',
-    icon: React.createElement(HiOutlineBriefcase),
-    start: 'Start year',
-    end: 'End Year or Present',
-  },
-] as const
-
 export const skills = [
   'Adobe CC',
   'Public Speaking',
@@ -108,13 +90,32 @@ export const skills = [
   'Persuasive Writing',
 ] as const
 
+export const experience: Array<Experience> = [
+  {
+    title: 'Ocean County College',
+    location: 'Toms River, NJ',
+    description: 'Associate in Science, CSIT',
+    icon: React.createElement(LuGraduationCap),
+    start: '2018',
+    end: '2020',
+  },
+  {
+    title: 'Apple, Inc',
+    location: 'Cupertino, CA',
+    description: "Design and develop the world's most innovative products.",
+    icon: React.createElement(HiOutlineBriefcase),
+    start: '2020',
+    end: 'Present',
+  },
+] as const
+
 /**
  * END SECTION DATA
  */
 /**
  * THE ITEMS BELOW APPEAR IN YOUR NAVIGATION MENU
  */
-export const links: Link[] = [
+export const links = [
   {
     name: 'Home',
     hash: '#home',
@@ -136,3 +137,16 @@ export const links: Link[] = [
     hash: '#experience',
   },
 ] as const
+
+export const socials = [
+  {
+    icon: React.createElement(FaLinkedin),
+    url: 'https://linkedin.com',
+    alt: 'Find me on LinkedIn',
+  },
+  {
+    icon: React.createElement(FaTiktok),
+    url: 'https://tiktok.com',
+    alt: 'Find me on TikTok',
+  },
+]

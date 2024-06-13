@@ -4,6 +4,10 @@ import './globals.css'
 import { cn } from '@/lib/utils'
 import Header from '@/components/Header'
 import { sitemetadata } from '@/lib/data'
+import ThemeContextProvider from '@/context/ThemeContext'
+import ActiveSectionContextProvider from '@/context/ActiveSectionContextProvider'
+import Footer from '@/components/Footer'
+import ThemeSwitch from '@/components/ThemeSwitch'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -21,13 +25,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      className={cn('scroll-smooth', { dark: sitemetadata.dark === true })}
-    >
+    <html lang="en" className={cn('scroll-smooth')}>
       <body className={cn('pt-28 font-sans sm:pt-36', fontSans.variable)}>
-        <Header />
-        <main>{children}</main>
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   )

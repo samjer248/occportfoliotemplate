@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image'
 import { FunctionComponentElement } from 'react'
 import { IconBaseProps, IconType } from 'react-icons'
-import { skills } from './data'
+import { links, skills } from './data'
 
 export type About = {
   /**
@@ -118,3 +118,4 @@ export interface Link {
 }
 
 type Skill = (typeof skills)[number]
+export type SectionName = (typeof links)[number]['name']

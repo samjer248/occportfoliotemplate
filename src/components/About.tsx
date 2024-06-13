@@ -4,14 +4,14 @@ import React from 'react'
 import { about } from '@/lib/data'
 import SectionHeading from '@/components/SectionHeading'
 import { motion } from 'framer-motion'
-// import { useSectionInView } from '@/lib/hooks'
+import { useSectionInView } from '@/lib/hooks'
 
 const About = () => {
-  // const { ref } = useSectionInView('About')
+  const { ref } = useSectionInView('About')
 
   return (
     <motion.section
-      // ref={ref}
+      ref={ref}
       className="prose mx-auto max-w-screen-sm scroll-mt-28 p-4 leading-8 dark:prose-invert sm:prose-lg lg:prose-xl xl:prose-2xl"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
