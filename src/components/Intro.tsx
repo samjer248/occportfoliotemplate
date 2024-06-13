@@ -45,7 +45,7 @@ const Intro = () => {
         </div>
       </div>
       <motion.div
-        className="prose mx-auto max-w-screen-sm py-3 sm:prose-lg lg:prose-xl xl:prose-2xl prose-h1:text-xl prose-h1:font-semibold sm:py-10 prose-h1:sm:text-3xl"
+        className="prose mx-auto max-w-screen-sm py-3 dark:prose-invert sm:prose-lg lg:prose-xl xl:prose-2xl prose-h1:text-xl prose-h1:font-semibold sm:py-10 prose-h1:sm:text-3xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >

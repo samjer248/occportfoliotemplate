@@ -9,12 +9,31 @@ import {
   FaTiktok,
   FaYoutube,
 } from 'react-icons/fa6'
+/**
+ * ADD IMAGES BELOW AS NEEDED
+ */
 import portrait from '../../public/portrait.jpg'
 import artifact1 from '../../public/artifacts/artifact1.png'
+/**
+ * END IMAGES
+ */
+/**
+ * BEGIN SEO DATA
+ * Set your site title and tell search engines about yourself
+ */
+export const sitemetadata = {
+  title: 'Your Name',
+  description: 'Replace with a description of you that is 145-160 characters.',
+  dark: false,
+}
+/**
+ * END SEO DATA
+ */
 
 /**
- * START SECTIONS
+ * BEGIN SECTION DATA
  */
+
 export const intro: Intro = {
   portrait: portrait,
   portraitAlt: 'Describe your profile picture',
@@ -35,12 +54,10 @@ export const intro: Intro = {
     },
   ],
 }
+
 export const about: About = {
   text: `After graduating with a degree in <strong>Accounting</strong>, I decided to pursue my passion for programming. I enrolled in a coding bootcamp and learned <strong>full-stack web development</strong>. <em>My favorite part of programming</em> is the problem-solving aspect. I love the feeling of finally figuring out a solution to a problem. My core stack is React, Next.js, Node.js, and MongoDB. I am also familiar with TypeScript and Prisma. I am always looking to learn new technologies. I am currently looking for a full-time position as a software developer.<br /> <em>When I'm not coding</em>, I enjoy playing video games, watching movies, and playing with my dog. I also enjoy <strong>learning new things</strong>. I am currently learning about <strong>history and philosophy</strong>. I'm also learning how to play the guitar.`,
 }
-/**
- * END SECTIONS
- */
 
 /**
  * Artifacts are the projects that you want to highlight
@@ -83,6 +100,20 @@ export const experience: Array<Experience> = [
   },
 ] as const
 
+export const skills = [
+  'Adobe CC',
+  'Public Speaking',
+  'Microsoft Office',
+  'APA Formatting',
+  'Persuasive Writing',
+] as const
+
+/**
+ * END SECTION DATA
+ */
+/**
+ * THE ITEMS BELOW APPEAR IN YOUR NAVIGATION MENU
+ */
 export const links: Link[] = [
   {
     name: 'Home',
@@ -104,12 +135,4 @@ export const links: Link[] = [
     name: 'Experience',
     hash: '#experience',
   },
-] as const
-
-export const skills = [
-  'Adobe CC',
-  'Public Speaking',
-  'Microsoft Office',
-  'APA Formatting',
-  'Persuasive Writing',
 ] as const

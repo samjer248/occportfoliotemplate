@@ -12,7 +12,7 @@ const About = () => {
   return (
     <motion.section
       // ref={ref}
-      className="prose mx-auto max-w-screen-sm scroll-mt-28 p-4 leading-8 sm:prose-lg lg:prose-xl xl:prose-2xl"
+      className="prose mx-auto max-w-screen-sm scroll-mt-28 p-4 leading-8 dark:prose-invert sm:prose-lg lg:prose-xl xl:prose-2xl"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
