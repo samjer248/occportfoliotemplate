@@ -45,9 +45,12 @@ const Artifact = ({
         )}
       >
         <CardHeader
-          className={cn('prose flex flex-row dark:prose-invert', {
-            'justify-end': index % 2 === 1,
-          })}
+          className={cn(
+            'prose flex flex-row justify-center dark:prose-invert sm:justify-start',
+            {
+              'sm:justify-end': index % 2 === 1,
+            },
+          )}
         >
           <CardTitle
             className={cn('sm:w-1/2', { 'text-muted': index % 2 === 1 })}

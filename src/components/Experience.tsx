@@ -16,8 +16,8 @@ export default function Experience() {
   const { theme } = useTheme()
   return (
     <section id="experience" ref={ref} className="scroll-mt-28">
-      <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline lineColor="#e5e7eb">
+      <SectionHeading className="pb-6">My experience</SectionHeading>
+      <VerticalTimeline lineColor={theme === 'light' ? '#e5e7eb' : 'darkgray'}>
         {experience.map((item, index) => (
           <React.Fragment key={item.title + index}>
             <VerticalTimelineElement
@@ -39,8 +39,7 @@ export default function Experience() {
               date={item.start + ' - ' + item.end}
               icon={item.icon}
               iconStyle={{
-                background:
-                  theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
+                background: theme === 'light' ? 'white' : 'rgba(0, 0, 0, 0.85)',
                 fontSize: '1.5rem',
               }}
             >

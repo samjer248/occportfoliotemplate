@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="relative z-[999]">
       <motion.div
-        className="fixed left-1/2 top-0 h-[4.5rem] w-full border border-white border-opacity-40 bg-white/80 shadow backdrop-blur-md dark:border-muted dark:bg-background/80 sm:top-6 sm:w-[38rem] sm:rounded-full"
+        className="fixed left-1/2 top-0 h-[4.5rem] w-full border border-white border-opacity-40 bg-background shadow backdrop-blur-md dark:border-muted sm:top-6 sm:w-[38rem] sm:rounded-full sm:bg-background/80"
         initial={{ y: -100, x: '-50%', opacity: 0 }}
         animate={{ y: 0, x: '-50%', opacity: 1 }}
         transition={{ type: 'spring', stiffness: 100 }}

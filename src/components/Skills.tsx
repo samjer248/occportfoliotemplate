@@ -29,7 +29,7 @@ const Skills = () => {
         className="mx-auto max-w-screen-md scroll-mt-28 text-center"
       >
         <SectionHeading>My skills</SectionHeading>
-        <ul className="flex flex-col justify-center gap-2 text-lg text-gray-800 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-4">
+        <ul className="my-6 flex flex-col justify-center gap-y-5 text-lg text-gray-800 sm:my-12 sm:mt-12 sm:flex-row sm:flex-wrap sm:gap-4">
           {skills.map((skill, index) => (
             <motion.li
               key={index}
