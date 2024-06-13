@@ -1,9 +1,7 @@
 'use client'
 import { sitemetadata, socials } from '@/lib/data'
-import Link from 'next/link'
-import React from 'react'
-import { buttonVariants } from './ui/button'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 export default function Footer() {
   const date = new Date()
@@ -16,7 +14,11 @@ export default function Footer() {
             const Icon = platform.icon.type
             return (
               <li key={platform.url}>
-                <Link href={platform.url} className={cn('block rounded-full')}>
+                <Link
+                  href={platform.url}
+                  className={cn('block rounded-full')}
+                  aria-label={platform.alt}
+                >
                   <Icon className="h-6 w-6 text-muted-foreground" />
                 </Link>
               </li>
