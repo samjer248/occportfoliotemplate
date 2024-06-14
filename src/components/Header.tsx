@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="relative z-[999]">
       <motion.div
-        className="fixed left-1/2 top-0 h-[4.5rem] w-full border border-white border-opacity-40 bg-background shadow backdrop-blur-md dark:border-muted sm:top-6 sm:w-[38rem] sm:rounded-full sm:bg-background/80"
+        className="fixed left-1/2 top-0 h-28 w-full border border-white border-opacity-40 bg-background/50 shadow backdrop-blur-md dark:border-muted sm:top-6 sm:h-20 sm:w-[38rem] sm:rounded-full"
         initial={{ y: -100, x: '-50%', opacity: 0 }}
         animate={{ y: 0, x: '-50%', opacity: 1 }}
         transition={{ type: 'spring', stiffness: 100 }}
@@ -34,7 +34,7 @@ const Header = () => {
                 >
                   <Link
                     className={cn(
-                      'transition-color flex w-full items-center justify-center px-3 py-3 text-xs hover:text-gray-950 dark:hover:text-muted-foreground sm:text-sm',
+                      'transition-color flex w-full items-center justify-center px-3 py-2 text-xs hover:text-gray-950 dark:hover:text-muted-foreground sm:text-sm',
                     )}
                     href={link.hash}
                     onClick={() => {
