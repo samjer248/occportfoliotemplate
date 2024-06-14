@@ -5,6 +5,8 @@ import SectionDivider from '@/components/SectionDivider'
 import Artifacts from '@/components/Artifacts'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
+import Gallery from '@/components/Gallery'
+import { gallery } from '@/lib/data'
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <SectionDivider />
       <About />
       <SectionDivider />
+      {gallery.length > 0 && (<><Gallery />
+      <SectionDivider /></>)}
       <Artifacts />
       <SectionDivider />
       <Skills />
