@@ -41,7 +41,7 @@ const Gallery = () => {
                   <CarouselItem key={item.alt + index}>
                     <div className="p-1">
                       <Card className={cn('border-0 shadow-none')}>
-                        <CardContent>
+                        <CardContent className="flex justify-center">
                           <Image
                             src={item.image}
                             alt={item.alt}
