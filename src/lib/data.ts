@@ -20,11 +20,11 @@ import artifact1 from '../../public/artifacts/artifact1.png'
 /**
  * BEGIN SEO DATA
  * Set your site title and tell search engines about yourself
+ * 👣Also, control what your footer says (replace Your Name with your name, of course)
  */
 export const sitemetadata = {
   title: 'Your Name',
   description: 'Replace with a description of you that is 145-160 characters.',
-  dark: false,
   footer: 'Your Name | All rights reserved',
 }
 /**
@@ -34,7 +34,11 @@ export const sitemetadata = {
 /**
  * BEGIN SECTION DATA
  */
-
+/**
+ * INTRO 👇 - Your 2 SECOND ELEVATOR PITCH
+ * PUT YOUR RESUME (resume.pdf) into the public folder
+ * ⚠️Make sure it doesn't have your address, phone number, or email address
+ */
 export const intro: Intro = {
   portrait: portrait,
   portraitAlt: 'Describe your profile picture',
@@ -56,12 +60,16 @@ export const intro: Intro = {
   ],
 }
 
+/**
+ * ABOUT SECTION - In one or two paragraphs, 
+ * tell your visitors more about you and your passions. 👇
+ */
 export const about: About = {
   text: `After graduating with a degree in <strong>Accounting</strong>, I decided to pursue my passion for programming. I enrolled in a coding bootcamp and learned <strong>full-stack web development</strong>. <em>My favorite part of programming</em> is the problem-solving aspect. I love the feeling of finally figuring out a solution to a problem. My core stack is React, Next.js, Node.js, and MongoDB. I am also familiar with TypeScript and Prisma. I am always looking to learn new technologies. I am currently looking for a full-time position as a software developer.<br /> <em>When I'm not coding</em>, I enjoy playing video games, watching movies, and playing with my dog. I also enjoy <strong>learning new things</strong>. I am currently learning about <strong>history and philosophy</strong>. I'm also learning how to play the guitar.`,
 }
 
 /**
- * Artifacts are the projects that you want to highlight
+ * ARTIFACTS SECTION - HIGHLIGHT YOUR AMAZING WORK 👇
  */
 export const artifacts: Array<Artifact> = [
   {
@@ -81,7 +89,9 @@ export const artifacts: Array<Artifact> = [
     url: 'https://www.linkedin.com/pulse/understanding-your-digital-footprint-how-can-help-job-sam/',
   },
 ] as const
-
+/**
+ * SKILLS SECTION - SHORT (one or two words each) 👇
+ */
 export const skills = [
   'Adobe CC',
   'Public Speaking',
@@ -89,7 +99,12 @@ export const skills = [
   'APA Formatting',
   'Persuasive Writing',
 ] as const
-
+/**
+ * EDUCATIONAL AND WORK EXPERIENCES 👇
+ * BE SURE TO USE THE APPROPRIATE ICON
+ * LuGraduationCap for School
+ * HiOutlineBriefcase for Work
+ */
 export const experience: Array<Experience> = [
   {
     title: 'Ocean County College',
@@ -108,12 +123,11 @@ export const experience: Array<Experience> = [
     end: 'Present',
   },
 ] as const
-
 /**
  * END SECTION DATA
  */
 /**
- * THE ITEMS BELOW APPEAR IN YOUR NAVIGATION MENU
+ * THE ITEMS BELOW 👇 APPEAR IN YOUR NAVIGATION MENU
  */
 export const links = [
   {
@@ -138,6 +152,9 @@ export const links = [
   },
 ] as const
 
+/**
+ * SOCIALS 👇 WILL APPEAR IN THE FOOTER OF YOUR PAGE
+ */
 export const socials = [
   {
     icon: React.createElement(FaLinkedin),

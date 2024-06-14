@@ -100,6 +100,9 @@ export type Intro = {
   portrait: StaticImageData | string
   portraitAlt: string
   emoji: string
+  /**
+   * Enter html to describe yourself. `<strong></strong>` for bold and `<em></em>` for italic
+   */
   description: string
   buttons: Button[]
 }
