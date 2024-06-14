@@ -12,7 +12,8 @@ import {
 /**
  * ADD IMAGES BELOW AS NEEDED
  */
-import portrait from '../../public/portrait.jpg'
+import metaimage from '../../public/images/metaimage.png'
+import portrait from '../../public/images/portrait.jpg'
 import artifact1 from '../../public/artifacts/artifact1.png'
 // 📸 ADD GALLERY IMAGES BELOW 👇
 import gallery1 from '../../public/images/gallery/gallery1.jpg'
@@ -27,9 +28,13 @@ import gallery3 from '../../public/images/gallery/gallery3.jpg'
  * 👣Also, control what your footer says (replace Your Name with your name, of course)
  */
 export const sitemetadata = {
+  domain: 'occeofportfolio.netlify.app',
   title: 'Your Name',
+  firstName: 'George',
+  lastName: 'Washington',
   description: 'Replace with a description of you that is 145-160 characters.',
   footer: 'Your Name | All rights reserved',
+  metaimage: metaimage,
 }
 /**
  * END SEO DATA
@@ -65,7 +70,7 @@ export const intro: Intro = {
 }
 
 /**
- * ABOUT SECTION - In one or two paragraphs, 
+ * ABOUT SECTION - In one or two paragraphs,
  * tell your visitors more about you and your passions. 👇
  */
 export const about: About = {
@@ -80,15 +85,15 @@ export const about: About = {
 export const gallery = [
   {
     image: gallery1,
-    alt: 'Describe the image'
+    alt: 'Describe the image',
   },
   {
     image: gallery2,
-    alt: 'Describe the image'
+    alt: 'Describe the image',
   },
   {
     image: gallery3,
-    alt: 'Describe the image'
+    alt: 'Describe the image',
   },
 ]
 /**

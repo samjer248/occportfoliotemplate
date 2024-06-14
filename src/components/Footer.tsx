@@ -7,7 +7,7 @@ export default function Footer() {
   const date = new Date()
   const year = date.getFullYear()
   return (
-    <footer className="my-10 px-4 text-center text-gray-500">
+    <footer className="my-10 px-4 text-center text-gray-300">
       {socials.length > 0 && (
         <ul className="flex justify-center gap-4 py-4 sm:gap-8 sm:py-8">
           {socials.map(platform => {

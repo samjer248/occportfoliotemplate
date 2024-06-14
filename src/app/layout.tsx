@@ -15,8 +15,12 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://${sitemetadata.domain || `example.com`}`),
   title: sitemetadata.title,
   description: sitemetadata.description,
+  openGraph: {
+    images: [sitemetadata.metaimage.src],
+  },
 }
 
 export default function RootLayout({
