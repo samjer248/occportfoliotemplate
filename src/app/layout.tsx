@@ -19,7 +19,11 @@ export const metadata: Metadata = {
   title: sitemetadata.title,
   description: sitemetadata.description,
   openGraph: {
-    images: [sitemetadata.metaimage.src],
+    images: [
+      typeof sitemetadata.metaimage === 'string'
+        ? sitemetadata.metaimage
+        : sitemetadata.metaimage.src,
+    ],
   },
 }
 

@@ -19,7 +19,7 @@ const ThemeContext = createContext<ThemeContextType | null>(null)
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>(sitemetadata.defaultTheme || 'dark')
+  const [theme, setTheme] = useState<Theme>('light')
 
   const toggleTheme = () => {
     if (theme === 'light') {

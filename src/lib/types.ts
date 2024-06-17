@@ -168,10 +168,6 @@ export interface Sitemetadata {
    * This image will appear as the preview when shared on social media
    */
   metaimage: StaticImageData | string
-  /**
-   * Decide if you want the dark or light theme to be the default user experience
-   */
-  defaultTheme: Theme
 }
 
 type Skill = (typeof skills)[number]

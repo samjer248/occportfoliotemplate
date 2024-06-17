@@ -42,7 +42,6 @@ export const sitemetadata: Sitemetadata = {
   description: 'Replace with a description of you that is 145-160 characters.',
   footer: 'Your Name | All rights reserved',
   metaimage: metaimage,
-  defaultTheme: 'dark',
 }
 /**
  * END SEO DATA
