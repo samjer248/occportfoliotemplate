@@ -1,4 +1,11 @@
-import { About, Artifact, Experience, Intro, Link } from '@/lib/types'
+import {
+  About,
+  Artifact,
+  Experience,
+  Intro,
+  Link,
+  Sitemetadata,
+} from '@/lib/types'
 import React from 'react'
 import { HiOutlineBriefcase } from 'react-icons/hi'
 import { LuGraduationCap } from 'react-icons/lu'
@@ -10,7 +17,7 @@ import {
   FaYoutube,
 } from 'react-icons/fa6'
 /**
- * ADD IMAGES BELOW AS NEEDED
+ * ADD IMAGES 🖼️ BELOW AS NEEDED
  */
 import metaimage from '../../public/images/metaimage.png'
 import portrait from '../../public/images/portrait.jpg'
@@ -27,7 +34,7 @@ import gallery3 from '../../public/images/gallery/gallery3.jpg'
  * Set your site title and tell search engines about yourself
  * 👣Also, control what your footer says (replace Your Name with your name, of course)
  */
-export const sitemetadata = {
+export const sitemetadata: Sitemetadata = {
   domain: 'occeofportfolio.netlify.app',
   title: 'Your Name',
   firstName: 'George',
@@ -35,6 +42,7 @@ export const sitemetadata = {
   description: 'Replace with a description of you that is 145-160 characters.',
   footer: 'Your Name | All rights reserved',
   metaimage: metaimage,
+  defaultTheme: 'dark',
 }
 /**
  * END SEO DATA
@@ -80,7 +88,8 @@ export const about: About = {
 /**
  * GALLERY 👇- Show off visual work with this component
  * DROP IMAGES INTO PUBLIC/IMAGES/GALLERY AND IMPORT THEM
- * AS SEEN AT THE TOP
+ * AS SEEN AT THE TOP. Leave the array empty if you don't want a gallery.
+ * gallery = [{image: gallery1, alt: 'Alt text for image'}]
  */
 export const gallery = [
   {
@@ -98,6 +107,7 @@ export const gallery = [
 ]
 /**
  * ARTIFACTS SECTION - HIGHLIGHT YOUR AMAZING WORK 👇
+ * artifacts = [{title: '', description: '', image: artifact1, tags: ['skill1', 'skill2'], url: 'optionally enter a url for user to visit'}]
  */
 export const artifacts: Array<Artifact> = [
   {
@@ -119,6 +129,7 @@ export const artifacts: Array<Artifact> = [
 ] as const
 /**
  * SKILLS SECTION - SHORT (one or two words each) 👇
+ * skills = ['Skill1', 'Skill2']
  */
 export const skills = [
   'Adobe CC',
@@ -132,6 +143,7 @@ export const skills = [
  * BE SURE TO USE THE APPROPRIATE ICON
  * LuGraduationCap for School
  * HiOutlineBriefcase for Work
+ * experience = [{title: '', location: '', description: '', icon: React.createElement(LuGraduationCap), start: '', end: ''}]
  */
 export const experience: Array<Experience> = [
   {
@@ -156,6 +168,7 @@ export const experience: Array<Experience> = [
  */
 /**
  * THE ITEMS BELOW 👇 APPEAR IN YOUR NAVIGATION MENU
+ * links = [{name: 'Home', hash: '#home'}]
  */
 export const links = [
   {
@@ -186,6 +199,7 @@ export const links = [
 
 /**
  * SOCIALS 👇 WILL APPEAR IN THE FOOTER OF YOUR PAGE
+ * socials = [{icon: React.createElement(FaLinkedIn), url: 'https://google.com', alt: 'Describe what will happen if they click this link'}]
  */
 export const socials = [
   {

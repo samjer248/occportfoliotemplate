@@ -2,6 +2,7 @@ import { StaticImageData } from 'next/image'
 import { FunctionComponentElement } from 'react'
 import { IconBaseProps, IconType } from 'react-icons'
 import { links, skills } from './data'
+import { Theme } from '@/context/ThemeContext'
 
 export type About = {
   /**
@@ -97,13 +98,29 @@ export interface Experience {
 }
 
 export type Intro = {
+  /**
+   * Portrait should be an image in public/images folder
+   * Import it at the top in the images section (around line 16)
+   */
   portrait: StaticImageData | string
+  /**
+   * Enter text that describes the image to help people with visual impairment
+   */
   portraitAlt: string
+  /**
+   * Add an emoji to appear near your photo
+   * or leave this empty if you don't want an emoji
+   */
   emoji: string
   /**
+   * This is your 5 second elevator pitch to introduce yourself.
    * Enter html to describe yourself. `<strong></strong>` for bold and `<em></em>` for italic
    */
   description: string
+  /**
+   * Add buttons that appear under your description. The first is usually a link to your resume
+   * Then you can add buttons to other things like social accounts.
+   */
   buttons: Button[]
 }
 
@@ -118,6 +135,43 @@ export interface Link {
    * separated by dashes like this: #about-me
    */
   hash: string // i.e. "#projects"
+}
+
+export interface Sitemetadata {
+  /**
+   * Your registered domain:
+   * i.e. firstnamelastname.com or firstnamelastname.netlify.app
+   */
+  domain: string
+  /**
+   * This is what the tab in your browser will say.
+   * Use your Full Name
+   */
+  title: string
+  /**
+   * Enter your First Name here
+   */
+  firstName: string
+  /**
+   * Enter your last name here
+   */
+  lastName: string
+  /**
+   * Describe yourself in 140 to 160 characters. Use a chatbot to help you trim this to the proper length.
+   */
+  description: string
+  /**
+   * This text will appear at the bottom of your site
+   */
+  footer: string
+  /**
+   * This image will appear as the preview when shared on social media
+   */
+  metaimage: StaticImageData | string
+  /**
+   * Decide if you want the dark or light theme to be the default user experience
+   */
+  defaultTheme: Theme
 }
 
 type Skill = (typeof skills)[number]

@@ -1,8 +1,9 @@
 'use client'
 
+import { sitemetadata } from '@/lib/data'
 import React, { useEffect, useState, createContext, useContext } from 'react'
 
-type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark'
 
 type ThemeContextProviderProps = {
   children: React.ReactNode
@@ -18,7 +19,7 @@ const ThemeContext = createContext<ThemeContextType | null>(null)
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>(sitemetadata.defaultTheme || 'dark')
 
   const toggleTheme = () => {
     if (theme === 'light') {
