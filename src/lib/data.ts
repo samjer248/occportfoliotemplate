@@ -33,6 +33,7 @@ import gallery3 from '../../public/images/gallery/gallery3.jpg'
  * BEGIN SEO DATA
  * Set your site title and tell search engines about yourself
  * 👣Also, control what your footer says (replace Your Name with your name, of course)
+ * ⚠️ Be sure to update your lastUpdated when you edit
  */
 export const sitemetadata: Sitemetadata = {
   domain: 'occeofportfolio.netlify.app',
@@ -42,6 +43,7 @@ export const sitemetadata: Sitemetadata = {
   description: 'Replace with a description of you that is 145-160 characters.',
   footer: 'Your Name | All rights reserved',
   metaimage: metaimage,
+  lastUpdated: '7/2/2024',
 }
 /**
  * END SEO DATA

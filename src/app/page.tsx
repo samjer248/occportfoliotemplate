@@ -19,15 +19,40 @@ export default function Home() {
         name: sitemetadata.title || '',
         url: `https://${sitemetadata.domain || `example.com`}/`,
         author: {
-          '@id': `https://${sitemetadata.domain || `example.com`}/#intro`,
+          '@id': `https://${sitemetadata.domain || `example.com`}/#${sitemetadata.firstName.toLowerCase() || 'person'}`,
         },
       },
       {
+        '@type': 'WebPage',
+        '@id': `https://${sitemetadata.domain}/#${sitemetadata.lastName.toLowerCase() || 'page'}`,
+        dateCreated: new Date('07/02/2024').toLocaleDateString('en-US', {
+          weekday: 'long',
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric',
+        }),
+        dateModified: sitemetadata.lastUpdated
+          ? new Date(sitemetadata.lastUpdated).toLocaleDateString('en-US', {
+              weekday: 'long',
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+            })
+          : undefined,
+        datePublished: new Date('07/02/2024').toLocaleDateString('en-US', {
+          weekday: 'long',
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric',
+        }),
+        copyrightYear: 2024,
+      },
+      {
         '@type': 'Person',
-        '@id': `https://${sitemetadata.domain || `example.com`}/#intro`,
+        '@id': `https://${sitemetadata.domain || `example.com`}/#${sitemetadata.firstName.toLowerCase() || 'person'}`,
         givenName: sitemetadata.firstName,
         familyName: sitemetadata.lastName,
-        knowsAbout: skills,
+        knowsAbout: skills || undefined,
       },
     ],
   }

@@ -168,6 +168,10 @@ export interface Sitemetadata {
    * This image will appear as the preview when shared on social media
    */
   metaimage: StaticImageData | string
+  /**
+   * Enter the date each time you update your content
+   */
+  lastUpdated: string
 }
 
 type Skill = (typeof skills)[number]
