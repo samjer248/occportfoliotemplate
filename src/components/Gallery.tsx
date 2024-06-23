@@ -45,7 +45,7 @@ const Gallery = () => {
                           <Image
                             src={item.image}
                             alt={item.alt}
-                            className="rounded-lg"
+                            className="cursor-grab rounded-lg"
                             placeholder="blur"
                           />
                         </CardContent>

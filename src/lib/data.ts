@@ -22,12 +22,14 @@ import {
 import metaimage from '../../public/images/metaimage.png'
 import portrait from '../../public/images/portrait.jpg'
 import artifact1 from '../../public/artifacts/artifact1.png'
-// 📸 ADD GALLERY IMAGES BELOW 👇
+/**
+ *  📸 ADD GALLERY IMAGES BELOW IF USING A GALLERY 👇
+ */
 import gallery1 from '../../public/images/gallery/gallery1.jpg'
 import gallery2 from '../../public/images/gallery/gallery2.jpg'
 import gallery3 from '../../public/images/gallery/gallery3.jpg'
 /**
- * END IMAGES
+ * END IMPORTING IMAGES
  */
 /**
  * BEGIN SEO DATA
@@ -40,7 +42,7 @@ export const sitemetadata: Sitemetadata = {
   title: 'Your Name',
   firstName: 'George',
   lastName: 'Washington',
-  description: 'Replace with a description of you that is 145-160 characters.',
+  description: "Replace with a description of you that's 145-160 characters.",
   footer: 'Your Name | All rights reserved',
   metaimage: metaimage,
   lastUpdated: '7/2/2024',
