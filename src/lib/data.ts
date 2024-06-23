@@ -127,7 +127,7 @@ export const artifacts: Array<Artifact> = [
       'Describe to your prospective employers and colleagues why this artifact is special. What learning happened while you worked on this? What impact might it have had on others?',
     image: artifact1,
     tags: ['Microsoft Office', 'Adobe CC'],
-    url: 'https://www.linkedin.com/pulse/understanding-your-digital-footprint-how-can-help-job-sam/',
+    url: '',
   },
 ] as const
 /**
