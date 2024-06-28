@@ -1,27 +1,14 @@
-import {
-  About,
-  Artifact,
-  Experience,
-  Intro,
-  Link,
-  Sitemetadata,
-} from '@/lib/types'
+import { About, Artifact, Experience, Intro, Sitemetadata } from '@/lib/types'
 import React from 'react'
+import { FaDownload, FaLinkedin, FaTiktok } from 'react-icons/fa6'
 import { HiOutlineBriefcase } from 'react-icons/hi'
 import { LuGraduationCap } from 'react-icons/lu'
-import {
-  FaGithub,
-  FaLinkedin,
-  FaDownload,
-  FaTiktok,
-  FaYoutube,
-} from 'react-icons/fa6'
 /**
  * ADD IMAGES 🖼️ BELOW AS NEEDED
  */
+import artifact1 from '../../public/artifacts/artifact1.png'
 import metaimage from '../../public/images/metaimage.png'
 import portrait from '../../public/images/portrait.jpg'
-import artifact1 from '../../public/artifacts/artifact1.png'
 /**
  *  📸 ADD GALLERY IMAGES BELOW IF USING A GALLERY 👇
  */
