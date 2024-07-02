@@ -26,9 +26,9 @@ import gallery3 from '../../public/images/gallery/gallery3.jpg'
  */
 export const sitemetadata: Sitemetadata = {
   domain: 'occeofportfolio.netlify.app',
-  title: 'Your Name',
-  firstName: 'George',
-  lastName: 'Washington',
+  title: 'CEO',
+  firstName: 'Beverly',
+  lastName: 'Walker-Anderson',
   description: "Replace with a description of you that's 145-160 characters.",
   footer: 'Your Name | All rights reserved',
   metaimage: metaimage,
@@ -50,7 +50,7 @@ export const intro: Intro = {
   portrait: portrait,
   portraitAlt: 'Describe your profile picture',
   emoji: '👋',
-  description: `Hello <strong>I'm Ryan</strong>. I'm a graduate of Ocean County College. I enjoy <em>solving problems</em> and helping others with their goals.`,
+  description: `Hello <strong>I'm Beverly</strong>. I'm a graduate of Ocean County College. I enjoy <em>solving problems</em> and helping others with their goals.`,
   buttons: [
     {
       label: 'Download Resume',
